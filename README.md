@@ -2,7 +2,47 @@
 ## 1. Statistical analysis of data on conserved regions from DNAsp
 
 ## 2. Degenerate base deletion
+### (1) Introduction
+The process_fasta_files script is designed to process all FASTA files (.fasta or .fas) within a specified folder. It offers functionality to modify sequence titles, rename sequence titles to match the file name, and clean up sequences by removing degenerate bases.
+### (2) Dependencies
+This script does not require any external Python packages. It only relies on Python's built-in modules: os and re.
+### （3）Usage
+1. Set the folder path where your FASTA files are stored.
+2. Choose your options:
+Modify titles to a custom title.
 
+Rename sequence titles to the filename.
+
+Keep the original titles with sequence numbering.
+
+3. Run the script:
+folder_path = 'C:\\path_to_your_folder'  # Replace with your folder path
+
+modify_titles = input("Do you want to modify the sequence titles to a custom title? (yes/no): ").lower() == 'yes'
+
+rename_to_filename = input("Do you want to rename all sequence titles to the file name? (yes/no): ").lower() == 'yes'
+
+if modify_titles:
+
+    new_title = input("Enter the new title (without '>'): ")
+    
+    process_fasta_files(folder_path, modify_titles, new_title, rename_to_filename)
+    
+elif rename_to_filename:
+
+    process_fasta_files(folder_path, False, None, rename_to_filename)
+    
+else:
+
+    process_fasta_files(folder_path)
+### （4）Script Functionality
+1. File Identification: The script scans the specified folder for .fasta or .fas files.
+
+2. Sequence Title Modification: You can choose to replace each sequence's title with a custom title and add a sequence number. Alternatively, titles can be replaced with the file name, along with a sequence number.
+
+3. Sequence Cleaning: The script removes degenerate bases (such as R, Y, M, K, S, W, H, B, V, D, N, Z) from the sequences, ensuring only standard bases (A, T, C, G) remain.
+
+4. Output: The script overwrites the original FASTA files with the processed sequences.
 ## 3. 1D code establishment
 ### (1) Introduction
 The replace_bases_and_format script is designed to process a text-based file (either .docx or .txt), replacing specific nucleotide bases (A, T, G, C) with a custom character (|) and formatting them with specific fonts, sizes, and colors. The output is a formatted Word document (.docx) that visually represents the modified sequence data.
