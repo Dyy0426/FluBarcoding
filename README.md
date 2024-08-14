@@ -25,10 +25,15 @@ replace_bases_and_format(input_file, output_file)
 The bases A, T, G, C are replaced with the character |.
 
 Each base is formatted with:
-	A: Font "Showcard Gothic", size 14pt, color RGB(128, 118, 163)
-	T: Font "Showcard Gothic", size 14pt, color RGB(255, 0, 0)
-	G: Font "Showcard Gothic", size 16pt, color RGB(86, 152, 195)
-	C: Font "Showcard Gothic", size 16pt, color RGB(0, 176, 80)
+
+A: Font "Showcard Gothic", size 14pt, color RGB(128, 118, 163)
+
+T: Font "Showcard Gothic", size 14pt, color RGB(255, 0, 0)
+
+G: Font "Showcard Gothic", size 16pt, color RGB(86, 152, 195)
+
+C: Font "Showcard Gothic", size 16pt, color RGB(0, 176, 80)
+
 3)	Output: The modified text is saved as a new .docx file with the specified formatting.
 
 ### （5）Notes
