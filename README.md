@@ -3,7 +3,35 @@
 
 ## 2. Degenerate base deletion.py
 ## 3. 1D code establishment
+### (1) Introduction
+The replace_bases_and_format script is designed to process a text-based file (either .docx or .txt), replacing specific nucleotide bases (A, T, G, C) with a custom character (|) and formatting them with specific fonts, sizes, and colors. The output is a formatted Word document (.docx) that visually represents the modified sequence data.
+### (2) Dependencies
+To run this script, you need the following Python packages:
+pip install python-docx #For reading and writing .docx files.
+### （3）Usage
+from docx import Document
+from docx.shared import RGBColor, Pt
+from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 
+#Define input and output files
+input_file = 'input.docx'  # Replace with your input file path. Prepare a .docx or .txt file containing nucleotide sequences where bases A, T, G, C will be processed.
+output_file = 'output.docx'  # Replace with your desired output file path. Specify the output file path for the new formatted Word document.
+
+#Run the script
+replace_bases_and_format(input_file, output_file)
+### （4）Script Functionality
+1） Input File Handling: The script accepts .docx and .txt files. It reads the content, preparing it for processing.
+2） Base Replacement:
+  The bases A, T, G, C are replaced with the character |.
+  Each base is formatted with:
+    A: Font "Showcard Gothic", size 14pt, color RGB(128, 118, 163)
+    T: Font "Showcard Gothic", size 14pt, color RGB(255, 0, 0)
+    G: Font "Showcard Gothic", size 16pt, color RGB(86, 152, 195)
+    C: Font "Showcard Gothic", size 16pt, color RGB(0, 176, 80)
+3） Output: The modified text is saved as a new .docx file with the specified formatting.
+### （5）Notes
+1）Ensure the font "Showcard Gothic" is available on your system. If not, you can modify the script to use another font.
+2）The script assumes standard text sequences; if you have special formatting or non-standard text, additional processing might be required.
 ## 4. Average nucleotide-level and species-level recall rate
 ### (1) Introduction
 This script processes DNA sequences provided in FASTA format. It compares species sequences against barcode sequences to calculate the Average Nucleotide Recall Rate (ANRR) and the average recall rates at different thresholds. The script splits the input sequences into test sequences and barcode sequences based on a user-defined index, modifies the test sequences according to the structure of the barcode sequences, and then calculates the recall rates. The results are saved in an Excel file.
