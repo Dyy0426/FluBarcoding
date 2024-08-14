@@ -1,6 +1,51 @@
 # FluBarcoding
 ## 1. Statistical analysis of data on conserved regions from DNAsp
+### (1) Introduction
+This script processes a text file by reading lines starting from the 25th line, identifies lines containing the word "Region," and replaces them with "XXX" followed by a counter. The modified content is then saved to a new output file. The script also sets the default locale to Simplified Chinese with UTF-8 encoding.
+### (2) Dependencies
+This script uses Python's built-in modules, so no additional packages are required.
+### （3）Usage
+1. Place your input file: Ensure that your input file is named X and is located in the same directory as the script.
 
+2. Run the script:
+```python
+import _locale
+import re
+
+# Set the default locale to Chinese (Simplified) with UTF-8 encoding
+_locale._getdefaultlocale = (lambda *args: ['zh_CN', 'utf8'])
+
+# Open the input file 'X' in read mode
+fi = open('X', 'r')
+# Open the output file 'XX' in write mode
+fo = open('XX', 'w')
+
+# Initialize a counter variable
+x = 1
+
+# Read all lines from the input file, starting from the 25th line
+lines = fi.readlines()[24::]
+
+# Iterate through each line in the file
+for line in lines:
+    # If the line contains the word 'Region'
+    if 'Region' in line:
+        # Replace the line with 'XXX' followed by the counter value, and write to the output file
+        fo.writelines(line.replace(line, "XXX") + " " + str(x) + "\n")
+        # Increment the counter
+        x = x + 1
+    else:
+        # If the line does not contain 'Region', write it as-is to the output file
+        fo.writelines(line)
+
+# Close the input file
+fi.close()
+# Close the output file
+fo.close()
+```
+### （4）Notes
+1. Ensure that the input file (X) is properly formatted and located in the same directory as the script.
+2. The script processes lines starting from the 25th line, so any relevant data should be after this point in the input file.
 ## 2. Degenerate base deletion
 ### (1) Introduction
 The process_fasta_files script is designed to process all FASTA files (.fasta or .fas) within a specified folder. It offers functionality to modify sequence titles, rename sequence titles to match the file name, and clean up sequences by removing degenerate bases.
