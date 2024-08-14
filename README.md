@@ -1,9 +1,10 @@
 # FluBarcoding
-## Statistical analysis of data on conserved regions from DNAsp
+## 1. Statistical analysis of data on conserved regions from DNAsp
 
-## Degenerate base deletion.py
-## 1D code establishment
-## Average nucleotide-level and species-level recall rate
+## 2. Degenerate base deletion.py
+## 3. 1D code establishment
+
+## 4. Average nucleotide-level and species-level recall rate
 ### (1) Introduction
 This script processes DNA sequences provided in FASTA format. It compares species sequences against barcode sequences to calculate the Average Nucleotide Recall Rate (ANRR) and the average recall rates at different thresholds. The script splits the input sequences into test sequences and barcode sequences based on a user-defined index, modifies the test sequences according to the structure of the barcode sequences, and then calculates the recall rates. The results are saved in an Excel file.
 ### (2) Dependencies
@@ -34,5 +35,30 @@ read_sequences_from_file(file_path): Reads sequences from a specified file.
 2.	Ensure that the input FASTA file is properly formatted and that the barcode file contains valid sequences for accurate results.
 3.	The output files will be saved in the current working directory unless specified otherwise.
 
-## Average nucleotide-level and species-level specificity
+## 5. Average nucleotide-level and species-level specificity
+### (1) Introduction
+This repository provides a Python script to analyze the specificity of DNA sequences using barcode sequences. The script processes sequences in FASTA format, computes the average nucleotide specificity, and generates an Excel file containing the results.
+### (2) Dependencies
+Before running the script, ensure that the following Python libraries are installed:
+Pip install pandas, tkinter
+import pandas
+import tkinter (This is usually included in Python standard libraries)
+### (3) Script Workflow
+1)	Input Files: Load the input FASTA and barcode files.
+2)	Sequence Splitting: Split sequences into test and barcode groups based on user input.
+3)	Specificity Calculation: Modify sequences, then calculate and compile specificity results.
+4)	Excel Export: Export the results to an Excel file for analysis.
+### (4) Example Usage
+input_fasta_path = ‘input.fasta’ # Replace with the path to your input FASTA file
+barcode_file_path = ‘barcodes_input.fasta’ # Replace with the path to your barcode file
+output_excel_path = ‘output.xlsx’ # Replace with the desired output Excel file path
 
+process_files_specificity(input_fasta_path, barcode_file_path, output_excel_path)
+### （5） Functions Overview
+parse_fasta(lines): Parses sequences from a list of lines in FASTA format.
+process_and_export_sequences(input_file_path, output_folder_path): Modifies sequences based on barcode gaps and exports them to text files.
+calculate_specificity(barcode_sequence, species_sequences): Calculates the average nucleotide specificity and specificity cases.
+process_files_specificity(input_fasta_path, barcode_file_path, output_excel_path): The main function that processes the input files and generates the output Excel file.
+### （6）Notes
+1.	Ensure the input FASTA file is formatted correctly for accurate results.
+2.	The script expects the input sequences to be properly aligned with the barcode sequences.
