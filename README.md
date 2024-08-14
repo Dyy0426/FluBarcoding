@@ -20,15 +20,16 @@ output_file = 'output.docx'  # Replace with your desired output file path. Speci
 #Run the script
 replace_bases_and_format(input_file, output_file)
 ### （4）Script Functionality
-1） Input File Handling: The script accepts .docx and .txt files. It reads the content, preparing it for processing.
-2） Base Replacement:
-  The bases A, T, G, C are replaced with the character |.
-  Each base is formatted with:
-    A: Font "Showcard Gothic", size 14pt, color RGB(128, 118, 163)
-    T: Font "Showcard Gothic", size 14pt, color RGB(255, 0, 0)
-    G: Font "Showcard Gothic", size 16pt, color RGB(86, 152, 195)
-    C: Font "Showcard Gothic", size 16pt, color RGB(0, 176, 80)
-3） Output: The modified text is saved as a new .docx file with the specified formatting.
+1)	Input File Handling: The script accepts .docx and .txt files. It reads the content, preparing it for processing.
+2)	Base Replacement:
+	The bases A, T, G, C are replaced with the character |.
+	Each base is formatted with:
+	A: Font "Showcard Gothic", size 14pt, color RGB(128, 118, 163)
+	T: Font "Showcard Gothic", size 14pt, color RGB(255, 0, 0)
+	G: Font "Showcard Gothic", size 16pt, color RGB(86, 152, 195)
+	C: Font "Showcard Gothic", size 16pt, color RGB(0, 176, 80)
+3)	Output: The modified text is saved as a new .docx file with the specified formatting.
+
 ### （5）Notes
 1）Ensure the font "Showcard Gothic" is available on your system. If not, you can modify the script to use another font.
 2）The script assumes standard text sequences; if you have special formatting or non-standard text, additional processing might be required.
