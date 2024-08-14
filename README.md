@@ -3,7 +3,7 @@
 
 ## Degenerate base deletion.py
 ## 1D code establishment
-## Average nucleotide-level and species-level specificity
+## Average nucleotide-level and species-level recall rate
 ### (1) Introduction
 This script processes DNA sequences provided in FASTA format. It compares species sequences against barcode sequences to calculate the Average Nucleotide Recall Rate (ANRR) and the average recall rates at different thresholds. The script splits the input sequences into test sequences and barcode sequences based on a user-defined index, modifies the test sequences according to the structure of the barcode sequences, and then calculates the recall rates. The results are saved in an Excel file.
 ### (2) Dependencies
@@ -34,5 +34,5 @@ read_sequences_from_file(file_path): Reads sequences from a specified file.
 2.	Ensure that the input FASTA file is properly formatted and that the barcode file contains valid sequences for accurate results.
 3.	The output files will be saved in the current working directory unless specified otherwise.
 
-## Average nucleotide-level and species-level recall rate
-This repository contains a Python script for processing FASTA files to analyze barcode sequences against test sequences, calculating specificity, and exporting results to an Excel file. The script is designed to handle DNA sequence data, calculate nucleotide specificity, and facilitate data sharing through an online platform.
+## Average nucleotide-level and species-level specificity
+
