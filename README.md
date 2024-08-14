@@ -16,7 +16,7 @@ Rename sequence titles to the filename.
 Keep the original titles with sequence numbering.
 
 3. Run the script:
-''' python
+```python
 folder_path = 'C:\\path_to_your_folder'  # Replace with your folder path
 modify_titles = input("Do you want to modify the sequence titles to a custom title? (yes/no): ").lower() == 'yes'
 rename_to_filename = input("Do you want to rename all sequence titles to the file name? (yes/no): ").lower() == 'yes'
@@ -28,7 +28,7 @@ elif rename_to_filename:
     process_fasta_files(folder_path, False, None, rename_to_filename)   
 else:
     process_fasta_files(folder_path)
-'''
+```
 ### （4）Script Functionality
 1. File Identification: The script scans the specified folder for .fasta or .fas files.
 
