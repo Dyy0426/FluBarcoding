@@ -16,7 +16,7 @@ Rename sequence titles to the filename.
 Keep the original titles with sequence numbering.
 
 3. Run the script:
-'''
+''' python
 folder_path = 'C:\\path_to_your_folder'  # Replace with your folder path
 modify_titles = input("Do you want to modify the sequence titles to a custom title? (yes/no): ").lower() == 'yes'
 rename_to_filename = input("Do you want to rename all sequence titles to the file name? (yes/no): ").lower() == 'yes'
