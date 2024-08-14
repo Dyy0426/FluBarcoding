@@ -1,7 +1,8 @@
 # FluBarcoding
 ## 1. Statistical analysis of data on conserved regions from DNAsp
 
-## 2. Degenerate base deletion.py
+## 2. Degenerate base deletion
+
 ## 3. 1D code establishment
 ### (1) Introduction
 The replace_bases_and_format script is designed to process a text-based file (either .docx or .txt), replacing specific nucleotide bases (A, T, G, C) with a custom character (|) and formatting them with specific fonts, sizes, and colors. The output is a formatted Word document (.docx) that visually represents the modified sequence data.
@@ -9,12 +10,17 @@ The replace_bases_and_format script is designed to process a text-based file (ei
 To run this script, you need the following Python packages:
 pip install python-docx #For reading and writing .docx files.
 ### （3）Usage
+
 from docx import Document
+
 from docx.shared import RGBColor, Pt
+
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 
 #Define input and output files
+
 input_file = 'input.docx'  # Replace with your input file path. Prepare a .docx or .txt file containing nucleotide sequences where bases A, T, G, C will be processed.
+
 output_file = 'output.docx'  # Replace with your desired output file path. Specify the output file path for the new formatted Word document.
 
 #Run the script
