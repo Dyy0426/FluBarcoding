@@ -44,7 +44,7 @@ The replace_bases_and_format script is designed to process a text-based file (ei
 To run this script, you need the following Python packages:
 pip install python-docx #For reading and writing .docx files.
 ### （3）Usage
-'''
+```
 from docx import Document
 from docx.shared import RGBColor, Pt
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
@@ -55,7 +55,7 @@ output_file = 'output.docx'  # Replace with your desired output file path. Speci
 
 #Run the script
 replace_bases_and_format(input_file, output_file)
-'''
+```
 ### （4）Script Functionality
 1)	Input File Handling: The script accepts .docx and .txt files. It reads the content, preparing it for processing.
 2)	Base Replacement:
@@ -91,13 +91,13 @@ import tkinter (This is usually included in Python standard libraries)
 4)	Calculating Recall Rates: The script then reads the barcode sequences from a specified file and calculates the recall rates by comparing each modified test sequence with the corresponding barcode sequence.
 5)	Saving Results: Finally, the script saves the calculated recall rates, including the ANRR and threshold-specific recall rates, into an Excel file.
 ### (4) Example Usage
-'''
+```
 input_fasta_path = ‘input.fasta’ # Replace with the path to your input FASTA file
 barcode_file_path = ‘barcodes_input.fasta’ # Replace with the path to your barcode file
 output_excel_path = ‘output.xlsx’ # Replace with the desired output Excel file path
 
 process_files_recall(input_fasta_path, barcode_file_path, output_excel_path)
-'''
+```
 ### (5) Functions Overview
 parse_fasta(lines): Parses FASTA sequences from a list of lines.
 modify_and_write_sequences(test_sequences, barcode_sequences, output_folder_path): Modifies test sequences by removing gaps and writes them to files.
@@ -123,13 +123,13 @@ import tkinter (This is usually included in Python standard libraries)
 3)	Specificity Calculation: Modify sequences, then calculate and compile specificity results.
 4)	Excel Export: Export the results to an Excel file for analysis.
 ### (4) Example Usage
-'''
+```
 input_fasta_path = ‘input.fasta’ # Replace with the path to your input FASTA file
 barcode_file_path = ‘barcodes_input.fasta’ # Replace with the path to your barcode file
 output_excel_path = ‘output.xlsx’ # Replace with the desired output Excel file path
 
 process_files_specificity(input_fasta_path, barcode_file_path, output_excel_path)
-'''
+```
 ### （5） Functions Overview
 parse_fasta(lines): Parses sequences from a list of lines in FASTA format.
 process_and_export_sequences(input_file_path, output_folder_path): Modifies sequences based on barcode gaps and exports them to text files.
