@@ -22,8 +22,8 @@ replace_bases_and_format(input_file, output_file)
 ### （4）Script Functionality
 1)	Input File Handling: The script accepts .docx and .txt files. It reads the content, preparing it for processing.
 2)	Base Replacement:
-	The bases A, T, G, C are replaced with the character |.
-	Each base is formatted with:
+a. The bases A, T, G, C are replaced with the character |.
+b. Each base is formatted with:
 	A: Font "Showcard Gothic", size 14pt, color RGB(128, 118, 163)
 	T: Font "Showcard Gothic", size 14pt, color RGB(255, 0, 0)
 	G: Font "Showcard Gothic", size 16pt, color RGB(86, 152, 195)
